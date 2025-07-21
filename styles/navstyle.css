@@ -33,17 +33,18 @@
     text-transform: uppercase;
 }
 
-.nav-links li{
+.nav-links li a{
     color: #2F2F2F;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in;
+    text-decoration: none;
 }
 
-.fa-cart-shopping {
+.fa-shopping-cart {
     color: #D9A57E;
 }
 
-.nav-links li:hover{
+.nav-links li a:hover{
     color: #D9A57E;
     text-decoration: underline;
 }

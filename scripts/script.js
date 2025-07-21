@@ -1,3 +1,13 @@
+    document.addEventListener('DOMContentLoaded', () => {
+    const filterBtn = document.getElementById('filterToggleBtn');
+    const dropdown = document.getElementById('filterDropdown');
+
+    filterBtn.addEventListener('click', () => {
+        dropdown.classList.toggle('show');
+    });
+});
+
+
 fetch('navbar.html')
         .then(res => res.text())
         .then(data => {
@@ -29,3 +39,4 @@ function updateCarousel() {
 
     cardList.style.transform = `translateX(-${offset}px)`;
 }
+
