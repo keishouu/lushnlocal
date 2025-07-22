@@ -1,0 +1,113 @@
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    footer {
+      background-color: #7B5E57;
+      padding: 20px;
+      margin-top: 100px;
+    }
+
+    .policy {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+
+    .policy span {
+      font-family: Poppins;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .policy-wrapper {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      .policy-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 40px;
+        justify-items: center;
+      }
+
+      .policy-items {
+        justify-content: flex-start;
+      }
+    }
+
+    .policy-items {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .policy-items span {
+      font-size: 16px;
+    }
+
+    .size-1 {
+      width: 35px;
+      height: 35px;
+    }
+
+    .size-2 {
+      width: 28px;
+      height: 28px;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 600px) {
+      .social-media {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .social-items {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .social-items img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .social-items span {
+      font-size: 14px;
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .copyright-items {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .copyright-items img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .copyright-items span {
+      font-size: 14px;
+    }
