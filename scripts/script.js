@@ -1,3 +1,17 @@
+
+fetch("navbar.html")
+	.then((res) => res.text())
+	.then((data) => {
+		document.getElementById("navbar").innerHTML = data;
+	});
+
+
+fetch("footer.html")
+	.then((res) => res.text())
+	.then((data) => {
+		document.getElementById("footer").innerHTML = data;
+	});
+
 document.addEventListener("DOMContentLoaded", () => {
 	const filterBtn = document.getElementById("filterToggleBtn");
 	const dropdown = document.getElementById("filterDropdown");
@@ -6,12 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		dropdown.classList.toggle("show");
 	});
 });
-
-fetch("navbar.html")
-	.then((res) => res.text())
-	.then((data) => {
-		document.getElementById("navbar").innerHTML = data;
-	});
 
 let currentIndex = 0;
 const cardList = document.querySelector(".card-list");
@@ -38,9 +46,3 @@ function updateCarousel() {
 
 	cardList.style.transform = `translateX(-${offset}px)`;
 }
-
-fetch("footer.html")
-	.then((res) => res.text())
-	.then((data) => {
-		document.getElementById("footer").innerHTML = data;
-	});

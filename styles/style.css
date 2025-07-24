@@ -328,10 +328,8 @@ body{
 .article-info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 1vh 3vw;
-    height: 100%;
+    padding: 1vh 20px;
+    min-height: 15vh;
 }
 
 .article-title{
@@ -348,6 +346,8 @@ body{
     font-size: 1rem;
     cursor: pointer;
     text-transform: capitalize;
+    display: flex;
+    justify-content: end;
 }
 
 .newsletter-wrapper{
@@ -513,15 +513,15 @@ body{
         font-size: 2vh;
     }
 
+    .section-header{
+        font-size: 2.5vh;
+    }
+
     .articles-list{
     display: flex;
     max-width: 90%;
     justify-content: space-around;
     margin: 0 auto;
-    }
-
-    .article-item{
-        list-style: none;
     }
 
     .article-link {
@@ -578,4 +578,58 @@ body{
     }
 
 
+}
+
+@media screen and (max-width: 500px){
+    
+    .articles-list{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .article-link{
+        max-width: 80vw;
+    }
+
+    .article-title, .article-btn{
+        font-size: 20px;
+    }
+
+    .newsletter-info{
+        gap: 10px;
+    }
+
+    .newsletter-icon img{
+        width: 80px;
+        height: auto;
+    }
+
+    .newsletter-header{
+        font-size: 2vh;
+    }
+
+    .newsletter-sub{
+        font-size: 1vh;
+        max-width: 190px;
+        margin: 0 auto;
+    }
+
+    .email-input{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .email{
+        padding: 0 5px;
+        margin: 1vh;
+        width: 50vw;
+        font-size: 10px;
+    }
+
+    .subscribe-btn{
+        width: 40vw;
+        margin: 0 auto;
+    }
 }
