@@ -14,7 +14,7 @@ body{
     font-family: "Playfair Display", sans-serif;
 }
 
-.sub-info{
+.sub-info, .fName, .email, .inquiry, .message, .send-btn{
     font-family: "Poppins", sans-serif;
 }
 
@@ -55,3 +55,69 @@ body{
     font-size: 1.2rem;
     max-width: 600px;
 }
+
+.contact-wrapper{
+    display: flex;
+    max-height: 700px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-img img{
+    height: 700px;
+    width: 700px;
+    object-fit: contain;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 600px;
+    gap: 20px;
+    text-align: center;
+}
+
+.form-header{
+    font-size: 50px;
+}
+.fName, .email, .inquiry, .message{
+    padding: 10px 5px;
+    color: #2F2F2F;
+    border: 1px solid #7B5E57;
+}
+
+.message{
+    text-align: left;
+    vertical-align: top;
+}
+
+.fName::placeholder, .email::placeholder, .message::placeholder{
+    color: #2F2F2F;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+}
+
+.send-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: #A8C3A0;
+    color: #FAF9F6;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    width: fit-content;
+}
+
+
+hr{
+    border: 1px solid #7B5E57;
+}
+
+/* .box-one span{
+    display: flex;} */
