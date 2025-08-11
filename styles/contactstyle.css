@@ -136,7 +136,7 @@ body{
     gap: 10px;
 }
 
-span i{
+.faq-category span i{
     width: 15px;
     height: 15px;
     padding: 5px;
