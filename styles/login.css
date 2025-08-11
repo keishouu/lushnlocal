@@ -79,6 +79,7 @@ body{
     color: #7B5E57;
     text-decoration: none;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 .login-btn{
@@ -92,6 +93,7 @@ body{
     text-transform: capitalize;
     padding: 10px 15px;
     width: 200px;
+    margin: 10px 0;
 }
 
 .sign-up-text{
@@ -114,8 +116,8 @@ body{
 .signup-wrapper{
     display: flex;
     background-color: #DCE8D3;
-    width: 60%;
-    min-height: 480px;
+    width: 70%;
+    height: 80%;
     border-radius: 10px;
     margin: 80px auto;
 }
@@ -129,9 +131,10 @@ body{
 }
 
 .signup-img-container img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
+    height: 460px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
 }
 
 .form-wrapper {
@@ -140,6 +143,19 @@ body{
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    padding: 20px 0;
+}
+
+.logo-img{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .sign-up-form{
@@ -173,6 +189,7 @@ body{
     text-transform: capitalize;
     padding: 10px 15px;
     width: 200px;
+    margin: 10px 0;
 }
 
 .login-text{
@@ -189,4 +206,82 @@ body{
 .login-text a{
     font-weight: bold;
     font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack layout for small screens */
+    .signup-wrapper {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    /* Make image scale properly */
+    .signup-img-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Adjust logo size */
+    .sign-up-form > img {
+        max-width: 120px;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .login-container,.signup-wrapper{
+        margin: 20px auto;
+        flex-direction: column; 
+        height: auto;
+        min-height: auto;
+    }
+
+    .login-container {
+        width: 90%;
+        padding-bottom: 5px;
+    }
+
+        .signup-wrapper {
+        width: 95%;
+        padding-bottom: 15px;
+    }
+
+    .login-img-container img{
+        max-width: 100%;
+        height: auto;
+    }
+
+        .signup-img-container img {
+        max-width: 100%;
+        height: 225px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    /* Full width form inputs */
+    .login-form input,
+    .sign-up-form input {
+        width: 90%;
+    }
+
+    /* Adjust button width */
+    .login-btn,
+    .signup-btn {
+        width: 100%;
+    }
+
+    /* Signup form layout */
+    .signup-img-container {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-wrapper {
+        flex: none;
+        width: 100%;
+    }
 }
