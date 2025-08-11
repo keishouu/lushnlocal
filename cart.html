@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lush and Local</title>
+    <link rel="stylesheet" href="styles/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="navbar"></div>
+      <div class="cart-header">
+        <h1>my cart</h1>
+      </div>
+
+      <div class="cart-content-container">
+        <table>
+            <colgroup>
+                <col style="width: 3%">
+                <col style="width: 5%"> 
+                <col style="width: 20%"> 
+                <col style="width: 20%">
+                <col style="width: 5%"> 
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th class="product-header">product</th>
+                    <th>quantity</th>
+                    <th>price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cart-item">
+                    <td>
+                        <input type="checkbox" name="product1" id="product1" />
+                    </td>
+                    <td class="product-cell">
+                        <img src="assets/product1.png" alt="Bamboo Cutlery" />
+                    </td>
+                    <td class="product-title">
+                        <p>bamboo cutlery set with pouch</p>
+                    </td>
+                    <td>
+                        <div class="item-qty">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" />
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </td>
+                    <td class="item-price">₱299</td>
+                </tr>
+                <tr class="cart-item">
+                    <td>
+                        <input type="checkbox" name="product2" id="product2" />
+                    </td>
+                    <td class="product-cell">
+                        <img src="assets/product2.png" alt="Bamboo Cutlery" />
+                    </td>
+                    <td class="product-title">
+                        <p>natural dish bar</p>
+                    </td>
+                    <td>
+                        <div class="item-qty">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" />
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </td>
+                    <td class="item-price">₱189</td>
+                </tr>
+            </tbody>
+        </table>
+            <div class="cart-total">
+                <div class="total-txt1">
+                    <p>Total</p>
+                </div>
+                <div class="total-txt2">
+                    <p><b>₱<span id="totalPrice">0</span></b></p>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="checkout-btn" onclick="window.location.href='checkout.html'">Place Order</button>
+            </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+
+    <script src="scripts/cartscript.js"></script>
+  </body>
+</html>
