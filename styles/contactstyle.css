@@ -10,11 +10,11 @@ body{
     background-color: #FAF9F6;
 }
 
-.header{
+.header, .box-header, .faq-header{
     font-family: "Playfair Display", sans-serif;
 }
 
-.sub-info{
+.sub-info, .fName, .email, .inquiry, .message, .send-btn, .box-one-details span, .box-two-details span, .faq-dropdown{
     font-family: "Poppins", sans-serif;
 }
 
@@ -54,4 +54,233 @@ body{
     color: #2F2F2F;
     font-size: 1.2rem;
     max-width: 600px;
+}
+
+.contact-wrapper{
+    display: flex;
+    max-height: 700px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.contact-img img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 45%;
+    gap: 20px;
+    text-align: center;
+}
+
+.form-header{
+    font-size: 50px;
+}
+.fName, .email, .inquiry, .message{
+    padding: 10px 5px;
+    color: #2F2F2F;
+    border: 1px solid #7B5E57;
+}
+
+.message{
+    text-align: left;
+    vertical-align: top;
+}
+
+.fName::placeholder, .email::placeholder, .message::placeholder{
+    color: #2F2F2F;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+}
+
+.send-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: #A8C3A0;
+    color: #FAF9F6;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    width: fit-content;
+}
+
+.shop-details-container{
+    margin: 100px 0;
+}
+
+.shop-details-container hr{
+    border: 1px solid #7B5E57;
+}
+
+.details-wrapper{
+    display: flex;
+    color: #2F2F2F;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.box-one-details, .box-two-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+span i{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+}
+
+.vl{
+    height: auto;
+    width: 0;
+    border: 1px solid #7B5E57;
+}
+
+.sub-banner-container img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.faq-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.faq-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 30px;
+}
+
+.faq-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    color: #2F2F2F;
+}
+
+.faq-header{
+    color: #7B5E57;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+
+.faq-item{
+    font-size: 1.2rem;
+    color: #2F2F2F;
+}
+
+.faq-category{
+    text-transform: capitalize;
+    background: #F1F1F1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.faq-category::after {
+      position: absolute;
+      right: 20px;
+      font-size: 1.5vh;
+      transition: transform 0.3s ease;
+    }
+
+.faq-category span{
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-category span i{
+    rotate: 90deg;
+}
+
+.faq-category.active i {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    font-size: 1rem;
+    padding: 0 50px;
+    transition: all 0.3s ease;
+}
+
+.faq-answer.open {
+    padding: 15px 50px;
+    max-height: 500px; 
+}
+
+
+@media screen and (max-width: 800px) {
+    .contact-wrapper{
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+
+    .contact-img img{
+        max-height: 0;
+        overflow: hidden;
+    }
+    .form-header{
+        font-size: 2rem;
+    }
+
+    .send-btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .details-wrapper{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vl{
+        height: 0;
+        width: 80%;
+        margin: 50px 0;
+    }
+
+    .faq-wrapper{
+        width: 90%;
+    } 
+    
+    .faq-header{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .faq-wrapper{
+        width: 90%;
+    }    
+    .faq-header{
+        font-size: 1.4rem;
+    }
 }
